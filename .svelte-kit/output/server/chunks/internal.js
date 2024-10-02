@@ -1,5 +1,5 @@
 import { c as create_ssr_component, a as setContext, v as validate_component, m as missing_component } from "./ssr.js";
-let base = "/leaforia";
+let base = "";
 let assets = base;
 const initial = { base, assets };
 function override(paths) {
@@ -39,6 +39,7 @@ const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   let { form } = $$props;
   let { data_0 = null } = $$props;
   let { data_1 = null } = $$props;
+  let { data_2 = null } = $$props;
   {
     setContext("__svelte__", stores);
   }
@@ -50,6 +51,7 @@ const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   if ($$props.form === void 0 && $$bindings.form && form !== void 0) $$bindings.form(form);
   if ($$props.data_0 === void 0 && $$bindings.data_0 && data_0 !== void 0) $$bindings.data_0(data_0);
   if ($$props.data_1 === void 0 && $$bindings.data_1 && data_1 !== void 0) $$bindings.data_1(data_1);
+  if ($$props.data_2 === void 0 && $$bindings.data_2 && data_2 !== void 0) $$bindings.data_2(data_2);
   let $$settled;
   let $$rendered;
   let previous_head = $$result.head;
@@ -70,7 +72,31 @@ const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
       },
       {
         default: () => {
-          return `${validate_component(constructors[1] || missing_component, "svelte:component").$$render(
+          return `${constructors[2] ? `${validate_component(constructors[1] || missing_component, "svelte:component").$$render(
+            $$result,
+            { data: data_1, this: components[1] },
+            {
+              this: ($$value) => {
+                components[1] = $$value;
+                $$settled = false;
+              }
+            },
+            {
+              default: () => {
+                return `${validate_component(constructors[2] || missing_component, "svelte:component").$$render(
+                  $$result,
+                  { data: data_2, form, this: components[2] },
+                  {
+                    this: ($$value) => {
+                      components[2] = $$value;
+                      $$settled = false;
+                    }
+                  },
+                  {}
+                )}`;
+              }
+            }
+          )}` : `${validate_component(constructors[1] || missing_component, "svelte:component").$$render(
             $$result,
             { data: data_1, form, this: components[1] },
             {
@@ -80,7 +106,7 @@ const Root = create_ssr_component(($$result, $$props, $$bindings, slots) => {
               }
             },
             {}
-          )}`;
+          )}`}`;
         }
       }
     )}` : `${validate_component(constructors[0] || missing_component, "svelte:component").$$render(
@@ -115,7 +141,7 @@ const options = {
   root: Root,
   service_worker: false,
   templates: {
-    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<script>\n	import "../app.css";\n  <\/script>\n  \n<html lang="en">\n	<head>\n		<title>leafora</title>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/leafora.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"><\/script>\n		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"><\/script>\n	  </head>\n	</svelte:head>\n	</head>\n	<body data-sveltekit-preload-data="hover"> \n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>\n",
+    app: ({ head, body, assets: assets2, nonce, env }) => '<!doctype html>\n<script>\n	import "../app.css";\n  <\/script>\n  \n<html lang="en">\n	<head>\n		<title>leaforia</title>\n		<meta charset="utf-8" />\n		<link rel="icon" href="' + assets2 + '/leafora.png" />\n		<meta name="viewport" content="width=device-width, initial-scale=1" />\n		' + head + '\n		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"><\/script>\n		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"><\/script>\n	  </head>\n	</svelte:head>\n	</head>\n	<body data-sveltekit-preload-data="hover"> \n		<div style="display: contents">' + body + "</div>\n	</body>\n</html>\n",
     error: ({ status, message }) => '<!doctype html>\n<html lang="en">\n	<head>\n		<meta charset="utf-8" />\n		<title>' + message + `</title>
 
 		<style>
@@ -187,7 +213,7 @@ const options = {
 		<div class="error">
 			<span class="status">` + status + '</span>\n			<div class="message">\n				<h1>' + message + "</h1>\n			</div>\n		</div>\n	</body>\n</html>\n"
   },
-  version_hash: "18fd1sm"
+  version_hash: "6y8q7n"
 };
 async function get_hooks() {
   return {};

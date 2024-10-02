@@ -1,4 +1,12 @@
 {
-	"/": [],
-	"/arscene": []
+	"/": [
+		"src/routes/+layout.js",
+		"src/routes/+layout.js"
+	],
+	"/arscene": [
+		"src/routes/arscene/+layout.js",
+		"src/routes/+layout.js",
+		"src/routes/arscene/+layout.js",
+		"src/routes/+layout.js"
+	]
 }

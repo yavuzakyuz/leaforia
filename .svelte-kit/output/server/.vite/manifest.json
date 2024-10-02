@@ -8,6 +8,10 @@
       "_internal.js"
     ]
   },
+  "_app.js": {
+    "file": "_app/immutable/assets/app.CwETsAyK.css",
+    "src": "_app.js"
+  },
   "_client.js": {
     "file": "chunks/client.js",
     "name": "client",
@@ -40,6 +44,15 @@
       "_client.js"
     ]
   },
+  "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/layout.svelte": {
+    "file": "entries/fallbacks/layout.svelte.js",
+    "name": "entries/fallbacks/layout.svelte",
+    "src": "node_modules/@sveltejs/kit/src/runtime/components/svelte-4/layout.svelte",
+    "isEntry": true,
+    "imports": [
+      "_ssr.js"
+    ]
+  },
   "node_modules/@sveltejs/kit/src/runtime/server/index.js": {
     "file": "index.js",
     "name": "index",
@@ -51,6 +64,15 @@
       "_ssr.js"
     ]
   },
+  "src/routes/+layout.js": {
+    "file": "entries/pages/_layout.js",
+    "name": "entries/pages/_layout",
+    "src": "src/routes/+layout.js",
+    "isEntry": true,
+    "css": [
+      "_app/immutable/assets/app.CwETsAyK.css"
+    ]
+  },
   "src/routes/+layout.svelte": {
     "file": "entries/pages/_layout.svelte.js",
     "name": "entries/pages/_layout.svelte",
@@ -60,7 +82,7 @@
       "_ssr.js"
     ],
     "css": [
-      "_app/immutable/assets/_layout.CwETsAyK.css"
+      "_app/immutable/assets/app.CwETsAyK.css"
     ]
   },
   "src/routes/+page.svelte": {
@@ -72,6 +94,12 @@
       "_ssr.js",
       "_client.js"
     ]
+  },
+  "src/routes/arscene/+layout.js": {
+    "file": "entries/pages/arscene/_layout.js",
+    "name": "entries/pages/arscene/_layout",
+    "src": "src/routes/arscene/+layout.js",
+    "isEntry": true
   },
   "src/routes/arscene/+page.svelte": {
     "file": "entries/pages/arscene/_page.svelte.js",

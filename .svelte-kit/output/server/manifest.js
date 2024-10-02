@@ -6,32 +6,17 @@ function __memo(fn) {
 
 return {
 	appDir: "_app",
-	appPath: "leaforia/_app",
+	appPath: "_app",
 	assets: new Set(["favicon.png","leafora.png"]),
 	mimeTypes: {".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.BhowDOpY.js","app":"_app/immutable/entry/app.DN5TIH3p.js","imports":["_app/immutable/entry/start.BhowDOpY.js","_app/immutable/chunks/entry.DPDjInXC.js","_app/immutable/chunks/scheduler.BvLojk_z.js","_app/immutable/entry/app.DN5TIH3p.js","_app/immutable/chunks/scheduler.BvLojk_z.js","_app/immutable/chunks/index.q1xvwFjU.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
+		client: {"start":"_app/immutable/entry/start.C3CamoKx.js","app":"_app/immutable/entry/app.F74ZW3r3.js","imports":["_app/immutable/entry/start.C3CamoKx.js","_app/immutable/chunks/entry.COCjkZag.js","_app/immutable/chunks/scheduler.CtbWrGNo.js","_app/immutable/entry/app.F74ZW3r3.js","_app/immutable/chunks/scheduler.CtbWrGNo.js","_app/immutable/chunks/index.BVyUmyNK.js"],"stylesheets":[],"fonts":[],"uses_env_dynamic_public":false},
 		nodes: [
 			__memo(() => import('./nodes/0.js')),
-			__memo(() => import('./nodes/1.js')),
-			__memo(() => import('./nodes/2.js')),
-			__memo(() => import('./nodes/3.js'))
+			__memo(() => import('./nodes/1.js'))
 		],
 		routes: [
-			{
-				id: "/",
-				pattern: /^\/$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 2 },
-				endpoint: null
-			},
-			{
-				id: "/arscene",
-				pattern: /^\/arscene\/?$/,
-				params: [],
-				page: { layouts: [0,], errors: [1,], leaf: 3 },
-				endpoint: null
-			}
+			
 		],
 		matchers: async () => {
 			
