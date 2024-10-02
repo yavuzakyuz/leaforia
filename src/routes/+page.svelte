@@ -10,7 +10,7 @@
       setTimeout(() => {
         isLoading = false;
         goto('/arscene');
-      }, 6000);
+      }, 3000);
     }
   </script>
   
