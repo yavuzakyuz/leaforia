@@ -1,0 +1,6 @@
+https://100.67.103.73:5174 {
+    reverse_proxy 127.0.0.1:5173
+    tls internal {
+        protocols tls1.2 tls1.3
+    }
+}
