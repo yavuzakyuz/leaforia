@@ -1,4 +1,3 @@
-<script>export const prerender = true;</script>
 <body style="margin: 0; overflow: hidden;">
   <a-scene embedded arjs="sourceType: webcam;">
     <!-- Marker definition -->
