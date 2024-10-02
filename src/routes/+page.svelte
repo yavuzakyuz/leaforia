@@ -20,7 +20,7 @@
       <div class="h-64 w-64 overflow-hidden">
         <img src="/leafora.png" alt="leaforapng" class="h-full w-full object-cover">
       </div>
-      <h1 class="text-3xl text-leaforaMainText">Leafora Studios</h1>
+      <h1 class="text-3xl text-leaforaMainText">Leaforia Studios</h1>
   
 
     <!-- Start Demo Button or Spinner -->
