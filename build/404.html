@@ -1,0 +1,45 @@
+<!doctype html>
+<script>
+	import "../app.css";
+  </script>
+  
+<html lang="en">
+	<head>
+		<title>leaforia</title>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/leaforia/leafora.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="modulepreload" href="/leaforia/_app/immutable/entry/start.C2GUcDug.js">
+		<link rel="modulepreload" href="/leaforia/_app/immutable/chunks/entry.7IkrGp4k.js">
+		<link rel="modulepreload" href="/leaforia/_app/immutable/chunks/scheduler.CtbWrGNo.js">
+		<link rel="modulepreload" href="/leaforia/_app/immutable/chunks/paths.BKBIF65B.js">
+		<link rel="modulepreload" href="/leaforia/_app/immutable/entry/app.DEB1WUq5.js">
+		<link rel="modulepreload" href="/leaforia/_app/immutable/chunks/index.BVyUmyNK.js">
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+		<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/2.2.1/aframe/build/aframe-ar.js"></script>
+	  </head>
+	</svelte:head>
+	</head>
+	<body data-sveltekit-preload-data="hover"> 
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_m6b927 = {
+						base: "/leaforia",
+						assets: "/leaforia"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/leaforia/_app/immutable/entry/start.C2GUcDug.js"),
+						import("/leaforia/_app/immutable/entry/app.DEB1WUq5.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>
